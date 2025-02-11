@@ -11,8 +11,9 @@ public class SineLaw {
         System.out.println("Please enter of angle a");
         double angle_a = scanner.nextDouble();
 
+        // Sin Law Usage to find Angle B
         double angle_b = Math.toDegrees(Math.asin(Math.sin(Math.toRadians(angle_a)) * side_b/side_a));
-        System.out.println("Your angle b is " + angle_b);
+        System.out.println("Your angle b in degrees is " + angle_b + "°");
         scanner.close();
 
     }
