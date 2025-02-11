@@ -4,8 +4,9 @@ public class QuadraticFormula {
 
     public static void quadraticFormula(double a, double b, double c)
     {
-        double root_1 = (-b + Math.sqrt(Math.pow(b, 2) + 4 * a * c))/(2 * a);
-        double root_2 = (-b - Math.sqrt(Math.pow(b, 2) + 4 * a * c))/(2 * a);
+        double discriminant = Math.sqrt(Math.pow(b, 2) - 4 * a * c);
+        double root_1 = (-b + discriminant)/(2 * a);
+        double root_2 = (-b - discriminant)/(2 * a);
         System.out.println("Root 1:" + root_1);
         System.out.println("Root 2:" + root_2);
 
