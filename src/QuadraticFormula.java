@@ -18,13 +18,14 @@ public class QuadraticFormula {
         
         Scanner keyboard = new Scanner(System.in);
 
-        System.out.println("Enter you a value: ");
+        System.out.println("Enter your a value: ");
         double a = keyboard.nextDouble();
-        System.out.println("Enter you b value: ");
+        System.out.println("Enter your b value: ");
         double b = keyboard.nextDouble();
-        System.out.println("Enter you c value: ");
+        System.out.println("Enter your c value: ");
         double c = keyboard.nextDouble();
 
         quadraticFormula(a, b, c);
+        keyboard.close();
     }
 }
