@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NAND {
+public class NANDGate {
     public static void main(String[] args) {
         // Ask the user or two boolean variables
         Scanner scanner = new Scanner(System.in);
