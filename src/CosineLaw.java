@@ -12,7 +12,7 @@ public class CosineLaw {
         System.out.println("Please enter of angle c");
         double angle_c = scanner.nextDouble();
 
-        // Cosine Law
+        // Calculate for side c(Cosine Law)
         double side_c = Math.sqrt(side_a * side_a + side_b * side_b - 2 * side_a * side_b * (Math.cos(Math.toRadians(angle_c))));
         System.out.println("Your side c is " + side_c);
         scanner.close();
