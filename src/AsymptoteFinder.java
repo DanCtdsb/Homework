@@ -5,6 +5,7 @@ public class AsymptoteFinder {
 
         Scanner keyboard = new Scanner(System.in);
 
+        // Ask user for m and n input
         System.out.println("Enter your m value: ");
         int m = keyboard.nextInt();
         System.out.println("Enter your n value: ");
@@ -14,6 +15,7 @@ public class AsymptoteFinder {
         } else if (n > m) {
             System.out.println("The asymptote is the x-axis");
         } else {
+            // Switch conditional
             switch (m - n) {
                 case 1:
                     System.out.println("The asymptote is linear");
@@ -47,7 +49,6 @@ public class AsymptoteFinder {
                     break;
             }
         }
-
         keyboard.close();
     }
 }
