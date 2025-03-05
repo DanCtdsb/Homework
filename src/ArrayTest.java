@@ -31,7 +31,11 @@ public class ArrayTest {
                     System.out.println("Please enter a specific index: "); 
 
                     int index = Integer.parseInt(keyboard.nextLine());
-                    System.out.println("Your value at " + index + " is " + inputs[index]); 
+                    if (0 <= index && index < 11) {
+                        System.out.println("Your value at " + index + " is " + inputs[index]); 
+                    } else {
+                        System.out.println("Invalid Index"); 
+                    }
                     break;
                 case "4":
                     break program;
