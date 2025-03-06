@@ -17,16 +17,12 @@ public class PolynomialFunction {
         System.out.println("Please enter your x value: ");
         int x = keyboard.nextInt();
 
-        System.out.print("Your function: f(x)= ");
-        String isNegative = " ";
+        System.out.print("Your function: f(x)=");
+        String function = "f(x)= ";
         for (int i = 0; i < coefficients.length; i++) {
-            if (i != 1) {
-                isNegative = (Double.parseDouble(coefficients[i]) >= 0) ? " +" : " ";
-
-            }
-            System.out.print(isNegative + coefficients[i] + "x^" + exponents[i]);
+            function += ((Double.parseDouble(coefficients[i]) >= 0 && i != 0) ? " +" : " ") + coefficients[i] + "x^" + exponents[i];
         }
-        System.out.println("");
+        System.out.println("Function: " + function);
         for (int i = 0; i < coefficients.length; i++) {
             result += Double.parseDouble(coefficients[i]) * Math.pow(x, Integer.parseInt(exponents[i]));
         }
@@ -34,7 +30,6 @@ public class PolynomialFunction {
         System.out.println("f(" + x + ")= " + result);
 
         // Loop through each token
-       
         keyboard.close();
     }
 }
