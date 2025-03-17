@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.util.StringTokenizer;
-
 
 public class PolynomialFunction {
     public static void main(String[] args) {
