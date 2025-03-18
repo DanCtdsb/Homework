@@ -62,6 +62,11 @@ public class Methods {
         Scanner keyboard = new Scanner(System.in);
         char input;
         do {
+            System.out.println("--------------------------------------------------"); 
+            System.out.println("Please enter a selection: "); 
+            System.out.println("1) Quadratic Formula"); 
+            System.out.println("2) PIApproximation"); 
+            System.out.println("3) Asymptote Finder"); 
             int choice = keyboard.nextInt();
 
             switch (choice) {
@@ -111,6 +116,7 @@ public class Methods {
                     aSymptoteFinder(m, n);
                     break;
             }
+            System.out.println("Do you want to continue?");
             input = keyboard.next().toLowerCase().charAt(0);
         } while (input == 'y');
         
