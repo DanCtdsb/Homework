@@ -15,7 +15,7 @@ public class ReadWrite {
         try {
             reader = new BufferedReader(new FileReader("numbers.txt"));
             while ((num = reader.readLine()) != null) {
-                sum += Integer.parseInt(num);
+                sum += Double.parseDouble(num);
                 counter++;
             }
         } catch (FileNotFoundException exception) {
