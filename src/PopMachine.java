@@ -20,17 +20,19 @@ public class PopMachine {
         }
     }
 
-    private void coinSlot(double money) {
+    private boolean coinSlot(double money) {
         if (money < pricePerCans) {
             System.out.println("Action rejected: Not enough money");
-            return;
+            return false;
         }
         amountofMoney += money;
         giveChange(money);
         boolean dispersed = disperseCan();
         if (!dispersed) {
             System.out.println("An Error has occured, your refund is $" + refund(dispersed));
+            return false;
         }
+        return true;
     }
 
     private void giveChange(double money) {
@@ -53,7 +55,7 @@ public class PopMachine {
         PopMachine popMachine = new PopMachine(10.0, 100, 1.5);
         while (money > 0) {
             
-            popMachine.coinSlot(1.5);
+            boolean dispersed = popMachine.coinSlot(1.5);
             money -= 1.5;
             System.out.println(money);
         }
